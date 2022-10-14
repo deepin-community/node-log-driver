@@ -1,0 +1,37 @@
+From 4524abc314b228a1353fc51cc44f21fb893b1c86 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Bastien=20ROUCARI=C3=88S?= <roucaries.bastien@gmail.com>
+Date: Thu, 24 Aug 2017 22:27:30 +0200
+Subject: Use sinon instead of sinon-restore
+
+Forwarded: no
+---
+ test/index.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/test/index.js b/test/index.js
+index edc9825..456d371 100644
+--- a/test/index.js
++++ b/test/index.js
+@@ -1,10 +1,12 @@
+ var should = require('should');
+ var logger = require('../index');
+ var defaultLogger = require('../index').logger;
+-var sinon = require('sinon-restore');
++var sinonbase = require('sinon');
+ var logged = "";
+ var oldConsoleLog = console.log;
+ 
++var sinon = sinonbase.sandbox.create();
++
+ /* NOTE: console.log is mocked in these tests, so any uses of it will be
+  * appended to the variabled "logged".  This will include any calls you
+  * make to console.log() for the purpose of debugging in these tests.
+@@ -22,7 +24,7 @@ describe("logdriver", function(){
+     });
+   });
+   afterEach(function(){
+-    sinon.restoreAll();
++    sinon.reset();
+     console.log = oldConsoleLog;
+     logged = "";
+   });

@@ -1,0 +1,31 @@
+From 149f3f4b3b1aa415d904a9cba4a5c7c488ba888c Mon Sep 17 00:00:00 2001
+From: Xavier Guimard <yadd@debian.org>
+Date: Thu, 14 Nov 2019 19:58:39 +0100
+Subject: Fix test for sinon 8
+
+---
+ test/index.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/test/index.js b/test/index.js
+index 456d371..4e68512 100644
+--- a/test/index.js
++++ b/test/index.js
+@@ -5,7 +5,7 @@ var sinonbase = require('sinon');
+ var logged = "";
+ var oldConsoleLog = console.log;
+ 
+-var sinon = sinonbase.sandbox.create();
++var sinon = sinonbase.createSandbox();
+ 
+ /* NOTE: console.log is mocked in these tests, so any uses of it will be
+  * appended to the variabled "logged".  This will include any calls you
+@@ -19,7 +19,7 @@ var sinon = sinonbase.sandbox.create();
+ describe("logdriver", function(){
+   beforeEach(function(){
+     logged = "";
+-    sinon.stub(console, 'log', function(str){
++    sinon.stub(console, 'log').callsFake( function(str){
+       logged += str + "\n";
+     });
+   });

@@ -1,0 +1,64 @@
+node-log-driver (1.2.7+git+20180219+bba1761737-7) unstable; urgency=medium
+
+  * Team upload
+  * Fix test for sinon 8
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 26 Dec 2019 08:36:29 +0100
+
+node-log-driver (1.2.7+git+20180219+bba1761737-6) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 01 Dec 2019 22:18:48 +0100
+
+node-log-driver (1.2.7+git+20180219+bba1761737-5) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable (node-sinon migration)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 19 Nov 2019 06:44:09 +0100
+
+node-log-driver (1.2.7+git+20180219+bba1761737-4) experimental; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.4.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Update debian/watch to use npm registry
+  * Add upstream/metadata
+  * Require node-sinon ≥ 7.4.2
+  * Fix test for sinon 7
+  * Drop unneeded version constraints from (build) dependencies
+  * Remove dpkg-dev from build dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 14 Nov 2019 20:00:07 +0100
+
+node-log-driver (1.2.7+git+20180219+bba1761737-3) unstable; urgency=medium
+
+  * Move to /usr/share
+  * Bump debhelper and policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 16 Sep 2019 22:11:43 +0200
+
+node-log-driver (1.2.7+git+20180219+bba1761737-2) unstable; urgency=medium
+
+  * Bump policy (no changes)
+  * Move to salsa
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 21 May 2018 21:46:19 +0200
+
+node-log-driver (1.2.7+git+20180219+bba1761737-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump compat and policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 22 Feb 2018 13:38:30 +0100
+
+node-log-driver (1.2.5+2017301git8cfc1bf3f8f2fa38a3+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #873135).
+  * Get git revision in order to get a LICENSE file.
+  * Repack in order to avoid screen capture without copyright file.
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 24 Aug 2017 21:12:06 +0200

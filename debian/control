@@ -1,0 +1,35 @@
+Source: node-log-driver
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Bastien Roucariès <rouca@debian.org>
+Section: javascript
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 12)
+ , nodejs (>=10)
+ , mocha (>= 4) <!nocheck>
+ , node-sinon (>= 7.4.2) <!nocheck>
+ , node-should <!nocheck>
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-log-driver
+Vcs-Git: https://salsa.debian.org/js-team/node-log-driver.git
+Homepage: https://github.com/cainus/logdriver
+Rules-Requires-Root: no
+
+Package: node-log-driver
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs (>= 10)
+Description: simple logging framework in pure javascript
+ This module implement logging to stdout and concatenate before
+ every message the log level severity (configurable)
+ date, time and local time zone. This modules allows ones
+ to easily trace log event even.
+ .
+ In all the cases logs are redirected to stdout in order to allows one
+ to pipe output to irc or logger  program
+ .
+ This modules is needed by tools like coveralls, a coverage tools
+ for javascript program.
+ .
+ Node.js is an event-based server-side JavaScript engine.

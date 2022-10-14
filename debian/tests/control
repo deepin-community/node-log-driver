@@ -1,0 +1,8 @@
+Tests: require
+Depends: node-log-driver, nodejs (>= 6)
+
+Tests: runtestsuite
+Depends: node-log-driver
+ , mocha (>= 4)
+ , node-sinon (>= 7.4.2)
+ , node-should (>= 1.1.0)
